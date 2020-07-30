@@ -48,7 +48,7 @@ def form_update_post(player_id):
                  request.form.get('fldHeight_inches'), request.form.get('fldWeight_lbs'),
                  request.form.get('fldAge'), player_id)
     sql_update_query = """UPDATE tblPlayersImport t SET t.fldName = %s, t.fldTeam = %s, t.fldPosition = %s, t.fldHeight_inches = 
-    %s, t.fldWeight_lbs = %s, t.fldAge = %s, t.fldPopulation = %s WHERE t.player_id = %s """
+    %s, t.fldWeight_lbs = %s, t.fldAge = %s WHERE t.player_id = %s """
     cursor.execute(sql_update_query, inputData)
     mysql.get_db().commit()
     return redirect("/", code=302)
