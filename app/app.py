@@ -22,7 +22,7 @@ def index():
     cursor = mysql.get_db().cursor()
     cursor.execute('SELECT * FROM tblPlayersImport')
     result = cursor.fetchall()
-    return render_template('index.html', title='Home', user=user, player=result)
+    return render_template('index.html', title='Home', user=user, players=result)
 
 
 @app.route('/view/<int:player_id>', methods=['GET'])
