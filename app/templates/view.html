@@ -5,13 +5,12 @@
     <h5 class="card-title">{{ player.fldName }} - {{ player.fldTeam }}</h5>
 
     <ul class="list-group list-group-flush">
-        <li class="list-group-item">Name: {{ city.fldLat }}</li>
-        <li class="list-group-item">Team: {{ city.fldLong }}</li>
-        <li class="list-group-item">Position: {{ city.fldCapitalStatus }}</li>
-        <li class="list-group-item">Height_inches: {{ city.fldCountry }}</li>
-        <li class="list-group-item">Weight_lbs: {{ city.fldPopulation }}</li>
-        <li class="list-group-item">Age: {{ city.fldPopulation }}</li>
-
+        <li class="list-group-item">Name: {{ player.fldName }}</li>
+        <li class="list-group-item">Team: {{ player.fldTeam }}</li>
+        <li class="list-group-item">Position: {{ player.fldPosition }}</li>
+        <li class="list-group-item">Height_inches: {{ player.fldHeight_inches }}</li>
+        <li class="list-group-item">Weight_lbs: {{ player.fldWeight_lbs }}</li>
+        <li class="list-group-item">Age: {{ player.fldAge }}</li>
     </ul>
     <div class="card-body">
         <a href="/edit/{{player.id}}" class="card-link btn btn-primary">edit</a>
